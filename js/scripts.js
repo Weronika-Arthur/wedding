@@ -184,7 +184,7 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Ram and Antara's Wedding",
+            title: "Ślub Weronika i Arthura",
 
             // Event start date
             start: new Date('Aug 27, 2022 15:00'),
