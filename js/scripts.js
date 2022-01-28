@@ -212,13 +212,13 @@ $(document).ready(function () {
         e.preventDefault();
         var data = $(this).serialize();
 
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Jeszcze chwila! </strong>Zapisujemy Twoje dane.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
-            $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
+        if (MD5($('#invite_code').val()) !== '98f13708210194c475687be6106a3b84'
+            && MD5($('#invite_code').val()) !== '02e74f10e0327ad868d138f2b4fdd6f0') {
+            $('#alert-wrapper').html(alert_markup('danger', '<strong>Przepraszamy!</strong> Twój kod zaproszenia jest nieprawidłowy.'));
         } else {
-            $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzDSOLbRhDEzuT3VqfeYcE0RBnSIGnFn-gCz1Ep-AV1FBh7kXdYnOC93vdm6qocu1wjHg/exec', data)
                 .done(function (data) {
                     console.log(data);
                     if (data.result === "error") {
@@ -230,7 +230,7 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> There is some issue with the server. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Przepraszmy!</strong> Wystąpił problem z działaniem serwera. '));
                 });
         }
     });
