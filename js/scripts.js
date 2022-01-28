@@ -230,7 +230,7 @@ $(document).ready(function () {
                 })
                 .fail(function (data) {
                     console.log(data);
-                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Przepraszmy!</strong> Wystąpił problem z działaniem serwera. '));
+                    $('#alert-wrapper').html(alert_markup('danger', '<strong>Przepraszamy!</strong> Wystąpił problem z działaniem serwera. '));
                 });
         }
     });
